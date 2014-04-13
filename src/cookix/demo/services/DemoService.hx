@@ -7,6 +7,7 @@ import cookix.core.services.config.Configuration;
  * @author Axel Anceau
  */
 @:service('demo.myService')
+@:parameters("test", "@cookix.configuration")
 class DemoService
 {
     /**

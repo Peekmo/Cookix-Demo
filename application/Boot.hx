@@ -1,8 +1,8 @@
 // import cookix.core.http.request.Request;
 // import cookix.core.http.request.AbstractRequest;
 // import cookix.templating.TemplateManager;
-// import cookix.core.container.ServiceContainer;
-// import cookix.demo.services.DemoService;
+import cookix.core.container.ServiceContainer;
+import cookix.demo.services.DemoService;
 // import cookix.core.routing.RoutingMacro;
 // import cookix.core.Kernel;
 
@@ -16,7 +16,8 @@ class Boot
         // var request = Request.create();
         // Kernel.handle(request);
         //trace(cookix.config.ConfigurationMacro.getConfiguration());
-        trace(cookix.core.container.ServiceContainer.getTags("myEvent"));
+        var service : DemoService = cast ServiceContainer.get('demo.myService');
+        service.test();
 
         // ServiceContainer.get('demo_service').test();
 
