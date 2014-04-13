@@ -1,0 +1,7 @@
+-main Boot
+-php /var/www/Cookix
+#-neko /var/www/Neko/index.n
+-cp src/
+-cp application/
+-lib cookix
+#--no-traces
