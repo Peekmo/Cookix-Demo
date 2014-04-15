@@ -7,7 +7,7 @@ import cookix.core.services.config.Configuration;
  * @author Axel Anceau
  */
 @:service('demo.myService')
-@:parameters("test", "@cookix.configuration")
+@:parameters("%general.env%", "@cookix.configuration")
 class DemoService
 {
     /**
@@ -33,7 +33,7 @@ class DemoService
 
     public function test() : Void
     {
-        trace(this.configService.getConfiguration());
+        trace(this.configService.get('general.env'));
         trace('test');
     }
 

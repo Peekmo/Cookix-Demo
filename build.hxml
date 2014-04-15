@@ -3,5 +3,6 @@
 #-neko /var/www/Neko/index.n
 -cp src/
 -cp application/
--lib cookix
+-cp ../Cookix
+# -lib cookix # When using haxelib
 #--no-traces

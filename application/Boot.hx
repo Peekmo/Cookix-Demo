@@ -15,7 +15,7 @@ class Boot
     {
         // var request = Request.create();
         // Kernel.handle(request);
-        //trace(cookix.config.ConfigurationMacro.getConfiguration());
+        cookix.core.routing.RoutingMacro.getRoutes();
         var service : DemoService = cast ServiceContainer.get('demo.myService');
         service.test();
 

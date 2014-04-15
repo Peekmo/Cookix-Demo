@@ -1,18 +1,3 @@
-{
-    "comment": ["Parameters can only be used in routes"],
-    "parameters": {
-        "param": "%general.env%"
-    },
-
-    "routes": {
-        "/test/%param%/:test/:id" : {
-            "controller": "cookix.demo.controllers.DemoController",
-            "action": "test",
-            "requirements": {
-                "_methods": ["POST", "GET"],
-                "test": "^[a-z]*$",
-                "id": "^[0-9]+$"
-            }
-        }
-    }
-}
+[
+	"cookix.demo.controllers.DemoController"
+]

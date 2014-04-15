@@ -7,12 +7,14 @@ import cookix.core.http.response.JsonResponse;
  * Controller usage example
  * @author Axel Anceau (Peekmo)
  */
+@:prefix('/salut/%general.env%')
 class DemoController extends cookix.core.controller.Controller
 {
     /**
      * Simple action
      */
     @:Route('/test')
+    @:Requirements({_methods: ["POST", "GET"]})
     public function testAction()
     {
         this.container.get('cookix.dispatcher').dispatch('test', 'test');
