@@ -7,14 +7,13 @@ import cookix.core.http.response.JsonResponse;
  * Controller usage example
  * @author Axel Anceau (Peekmo)
  */
-@:prefix('/salut/%general.env%')
+@:prefix('/%general.env%')
 class DemoController extends cookix.core.controller.Controller
 {
     /**
      * Simple action
      */
-    @:Route('/test')
-    @:Requirements({_methods: ["POST", "GET"]})
+    @:get('/test')
     public function testAction()
     {
         this.container.get('cookix.dispatcher').dispatch('test', 'test');
@@ -25,11 +24,10 @@ class DemoController extends cookix.core.controller.Controller
         return response;
     }
 
-    public function test2Action()
+    @:get('/test/:id', {parameters: {id: "[0-9]+"}})
+    public function test2Action(id : String)
     {
-        var response = new JsonResponse({ok: 'ok'});
+        var response = new JsonResponse({id: id});
         return response;
     }
 }
-
-// haxe.rtti.Meta
