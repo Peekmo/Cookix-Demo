@@ -28,16 +28,16 @@ class DemoService
     {
         this.iString = iString;
         this.configService = config;
-        trace(this.iString);
     }
 
+    @:tag({name: "cookix.onRequest", type: "event", priority: 3})
     public function test() : Void
     {
         trace(this.configService.get('general.env'));
         trace('test');
     }
 
-    @:tag({name: "myEvent", type: "event"})
+    @:tag({name: "cookix.onRequest", type: "event", priority: 2})
     public function onEvent(event: Dynamic) : Void
     {
         trace('Event received');
