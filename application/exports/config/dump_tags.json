@@ -1,0 +1,1 @@
+{"cookix.onRequest":[{"name":"cookix.onRequest","type":"event","service":"demo.myService","method":"test","priority":"3"},{"name":"cookix.onRequest","type":"event","service":"demo.myService","method":"onEvent","priority":"2"}]}
