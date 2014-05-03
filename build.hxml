@@ -1,13 +1,15 @@
 -main Command
 -cp application/
--neko cookix.n
---next
-
--main Boot
--php /var/www/Cookix
-#-neko /var/www/Neko/index.n
 -cp src/
--cp application/
 -cp ../Cookix
+-neko cookix.n
+# --next
+
+# -main Boot
+# -php /var/www/Cookix
+# #-neko /var/www/Neko/index.n
+# -cp src/
+# -cp application/
+# -cp ../Cookix
 # -lib cookix # When using haxelib
 #--no-traces

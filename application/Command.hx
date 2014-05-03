@@ -10,6 +10,6 @@ class Command
 	 */
 	public static function main() : Void
 	{
-		
+		cookix.core.command.CommandMacro.getCommands();		
 	}
 }
